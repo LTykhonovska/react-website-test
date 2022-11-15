@@ -4,6 +4,7 @@ import tour2 from './../../images/tour2-mountains.jpg';
 import tour3 from './../../images/tour3-beach.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+import { Slide } from 'react-reveal';
 import styles from './Tours.module.css';
 
 const toursData = [
@@ -28,16 +29,18 @@ function Tours(props) {
   return (
     <section className={styles.toursSection}>
       <div className={styles.container}>
-        <div className={styles.cardsWrapper}>
-          {toursData.map(({ img, title }, id) => {
-            return (
+        <Slide bottom cascade duration={1800} delay={800}>
+          <div className={styles.cardsWrapper}>
+            {toursData.map(({ img, title }, id) => {
+              return (
                 <div key={id} className={styles.cardItem}>
                   <img src={img} alt={title}/>
                   <h6>{title}</h6>
                 </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </Slide>
         <button className={styles.toursBtn}>Other tours
           <FontAwesomeIcon icon={faArrowRightLong}/>
         </button>

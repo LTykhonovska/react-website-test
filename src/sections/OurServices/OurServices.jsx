@@ -9,6 +9,7 @@ import {
   faEarth,
   faStar
 } from '@fortawesome/free-solid-svg-icons';
+import { Slide } from "react-reveal";
 import styles from './OurServices.module.css';
 
 const servicesData = [
@@ -55,6 +56,7 @@ function OurServices(props) {
     <section className={styles.servicesSection}>
       <div className={styles.container}>
         <SectionHeading heading='Our Services'/>
+        <Slide right cascade duration={2000} delay={1600}>
         <div className={styles.servicesWrapper}>
           {servicesData.map(({ icon, title, text }, id) => {
             return (
@@ -70,6 +72,7 @@ function OurServices(props) {
             );
           })}
         </div>
+        </Slide>
       </div>
     </section>
   );

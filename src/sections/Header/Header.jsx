@@ -5,6 +5,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { faPhone, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import ButtonFactory from "../../components/Button/Button";
 import classNames from "classnames";
+import { Slide } from "react-reveal";
 import styles from './Header.module.css';
 
 function Header(props) {
@@ -22,27 +23,29 @@ function Header(props) {
   })
 
   return (
-    <section className={styles.header}>
-      <div className={styles.logo}>
-        <a href="/home">
-          <img src={logo} alt="logo"/>
-        </a>
-      </div>
-      <button className={infoHamburgerClass} onClick={onMobileInfoBtnClick}>
-        <FontAwesomeIcon icon={faEllipsisVertical}/>
-      </button>
-      <div className={isInfoExpanded ? styles.infoMobile : styles.info}>
-        <div className={styles.infoTimeline}>
-          <FontAwesomeIcon icon={faClock}/>
-          <span><small>09:00</small>AM — <small>05:00</small>PM</span>
+    <Slide top duration={1800} delay={600}>
+      <section className={styles.header}>
+        <div className={styles.logo}>
+          <a href="/home">
+            <img src={logo} alt="logo"/>
+          </a>
         </div>
-        <div className={styles.infoPhone}>
-          <FontAwesomeIcon icon={faPhone}/>
-          <a href="tel:+1 323-913-4688">+1 323-913-4688</a>
+        <button className={infoHamburgerClass} onClick={onMobileInfoBtnClick}>
+          <FontAwesomeIcon icon={faEllipsisVertical}/>
+        </button>
+        <div className={isInfoExpanded ? styles.infoMobile : styles.info}>
+          <div className={styles.infoTimeline}>
+            <FontAwesomeIcon icon={faClock}/>
+            <span><small>09:00</small>AM — <small>05:00</small>PM</span>
+          </div>
+          <div className={styles.infoPhone}>
+            <FontAwesomeIcon icon={faPhone}/>
+            <a href="tel:+1 323-913-4688">+1 323-913-4688</a>
+          </div>
+          <ButtonFactory text={'Call me back'} type={'green'}/>
         </div>
-        <ButtonFactory text={'Call me back'} type={'green'} />
-      </div>
-    </section>
+      </section>
+    </Slide>
   );
 }
 

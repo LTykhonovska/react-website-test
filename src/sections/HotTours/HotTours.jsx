@@ -4,6 +4,7 @@ import ButtonFactory from "../../components/Button/Button";
 import ReactStars from "react-rating-stars-component";
 import hotTour1 from '../../images/hotTour1-spain.jpg';
 import hotTour2 from '../../images/hotTour2-africa.jpg';
+import { Slide } from 'react-reveal';
 import styles from './HotTours.module.css';
 
 const hotToursData = [
@@ -38,6 +39,7 @@ function HotTours(props) {
       <div className={styles.hotToursWrapper}>
         {hotToursData.map(({ id, img, title, text, price, review }) => {
           return (
+            <Slide bottom duration={1200} delay={500}>
             <div className={styles.card} key={id}>
               <div className={styles.cardImg}>
                 <img src={img} alt={title}/>
@@ -60,6 +62,7 @@ function HotTours(props) {
                 <ButtonFactory text={'Buy this tour'} type={'green'}/>
               </div>
             </div>
+          </Slide>
           );
         })}
       </div>

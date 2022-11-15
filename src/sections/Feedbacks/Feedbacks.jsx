@@ -1,9 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import user1 from './../../images/people/user1.jpeg';
-import user2 from '../../images/people/user2.jpeg';
-import user3 from '../../images/people/user3.jpeg';
+import user1 from './../../images/user1.jpeg';
+import user2 from '../../images/user2.jpeg';
+import user3 from '../../images/user3.jpeg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";

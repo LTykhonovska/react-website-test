@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import SocialsList from "../../components/SocialsList/SocialsList";
 import classNames from "classnames";
+import { Slide } from 'react-reveal';
 import styles from './Navigation.module.css';
 
 function Navigation(props) {
@@ -42,7 +43,7 @@ function Navigation(props) {
               <NavLink to="/aboutPage">About</NavLink>
             </li>
             <li className={styles.menuItemMobile}>
-              <NavLink to="/galleryPage">Gallery</NavLink>
+              <NavLink to="/servicesPage">Services</NavLink>
             </li>
             <li className={styles.menuItemMobile}>
               <NavLink to="/contactPage">Contact</NavLink>
@@ -50,32 +51,37 @@ function Navigation(props) {
           </ul>
         </div>
         <div className={styles.navigationWrapper}>
-          <div className={styles.menu}>
-            <NavLink
-              to="/"
-              end={true}
-              className={({ isActive }) => classNames(styles.menuItem, {[styles.active]: isActive})}>
-              Home
-            </NavLink>
-            <NavLink
-              to="/aboutPage"
-              className={({ isActive }) => classNames(styles.menuItem, {[styles.active]: isActive})}>
-              About
-            </NavLink>
-            <NavLink
-              to="/galleryPage"
-              className={({ isActive }) => classNames(styles.menuItem, {[styles.active]: isActive})}>
-              Gallery
-            </NavLink>
-            <NavLink
-              to="/contactPage"
-              className={({ isActive }) => classNames(styles.menuItem, {[styles.active]: isActive})}>
-              Contact
-            </NavLink>
-            <div className={styles.line}/>
-          </div>
-          <SocialsList/>
+          <Slide left duration={1800} delay={600}>
+            <div className={styles.menu}>
+              <NavLink
+                to="/"
+                end={true}
+                className={({ isActive }) => classNames(styles.menuItem, { [styles.active]: isActive })}>
+                Home
+              </NavLink>
+              <NavLink
+                to="/aboutPage"
+                className={({ isActive }) => classNames(styles.menuItem, { [styles.active]: isActive })}>
+                About
+              </NavLink>
+              <NavLink
+                to="/servicesPage"
+                className={({ isActive }) => classNames(styles.menuItem, { [styles.active]: isActive })}>
+                Services
+              </NavLink>
+              <NavLink
+                to="/contactPage"
+                className={({ isActive }) => classNames(styles.menuItem, { [styles.active]: isActive })}>
+                Contact
+              </NavLink>
+              <div className={styles.line}/>
+            </div>
+          </Slide>
+          <Slide right duration={1800} delay={600}>
+            <SocialsList/>
+          </Slide>
         </div>
+
       </div>
     </section>
   );

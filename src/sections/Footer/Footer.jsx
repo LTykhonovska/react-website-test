@@ -4,8 +4,8 @@ import SocialsList from "../../components/SocialsList/SocialsList";
 import ScrollUpBtn from "../../components/ScrollUpBtn/ScrollUpBtn";
 import { faMailForward, faPhone, faMapLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Slide } from "react-reveal";
 import styles from './Footer.module.css';
-
 
 function Footer(props) {
   return (
@@ -72,11 +72,13 @@ function Footer(props) {
         </div>
         <div className={styles.copyright}>
           <div className={styles.container}>
-            <div className={styles.copyrightWrapper}>
-              <span>© 2022 Wonder Tour. <br/> All Rights Reserved. </span>
-              <SocialsList/>
-              <a href="/#">Privacy Policy</a>
-            </div>
+            <Slide bottom duration={800} delay={300}>
+              <div className={styles.copyrightWrapper}>
+                <span>© 2022 Wonder Tour. <br/> All Rights Reserved. </span>
+                <SocialsList/>
+                <a href="/#">Privacy Policy</a>
+              </div>
+            </Slide>
           </div>
         </div>
         <ScrollUpBtn/>

@@ -41,7 +41,7 @@ function Hero(props) {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 3500,
+          delay: 5000,
           disableOnInteraction: true,
         }}
         onSlideChange={() => console.log('slide change')}
@@ -67,11 +67,11 @@ function Hero(props) {
                   <h6>
                     {title}
                   </h6>
-                <h4>
-                  {subtitle}
-                  <span>{span}</span>
-                </h4>
-                <ButtonFactory text={'Get in Touch'} type={'white'}/>
+                  <h4>
+                    {subtitle}
+                    <span>{span}</span>
+                  </h4>
+                  <ButtonFactory text={'Get in Touch'} type={'white'}/>
               </div>
             </SwiperSlide>
           );

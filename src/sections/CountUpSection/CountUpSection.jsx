@@ -2,6 +2,7 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { ParallaxBanner } from "react-scroll-parallax";
 import bgImg from '../../images/countUpParallax.jpg';
+import { Slide } from "react-reveal";
 import styles from './CountUpSection.module.css';
 
 function CountUpSection(props) {
@@ -11,6 +12,7 @@ function CountUpSection(props) {
         layers={[{ image: bgImg, speed: -15 }]}
         className="aspect-[2/1]"
       >
+        <Slide top cascade duration={2000}>
         <div className={styles.countUpSectionWrapper}>
           <div className={styles.countUpSectionItem}>
             <CountUp end={12}
@@ -36,6 +38,7 @@ function CountUpSection(props) {
             <h6 className={styles.countUpSectionItemTitle}>Team Members</h6>
           </div>
         </div>
+        </Slide>
       </ParallaxBanner>
     </section>
   );

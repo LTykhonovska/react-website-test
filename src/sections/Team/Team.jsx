@@ -1,9 +1,10 @@
 import React from 'react';
-import team1 from '../../images/people/user1.jpeg';
-import team2 from '../../images/people/user2.jpeg';
-import team3 from '../../images/people/user3.jpeg';
-import team4 from '../../images/people/user4.jpeg';
+import team1 from '../../images/user1.jpeg';
+import team2 from '../../images/user2.jpeg';
+import team3 from '../../images/user3.jpeg';
+import team4 from '../../images/user4.jpeg';
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { Slide } from 'react-reveal';
 import styles from './Team.module.css';
 
 const teamData = [
@@ -41,6 +42,7 @@ function Team(props) {
   return (
     <section className={styles.team}>
       <SectionHeading heading='Different People — One Mission'/>
+      <Slide bottom cascade duration={1400} >
       <div className={styles.teamWrapper}>
         {teamData.map(({id, img, name, position, phone}) => {
           return (
@@ -57,6 +59,7 @@ function Team(props) {
           );
         })}
       </div>
+      </Slide>
     </section>
   );
 }
