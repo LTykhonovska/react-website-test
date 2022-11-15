@@ -1,0 +1,51 @@
+.countUpSection {
+
+}
+
+.countUpSectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.countUpSectionItem {
+    color: var(--white);
+    text-align: center;
+    padding-right: 50px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.countUpSectionItem:last-child {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.countUpSectionItem span {
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.countUpSectionItem::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: var(--grey-bg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.countUpSectionItem:last-child::after {
+    display: none;
+}
+
+.countUpSectionItemTitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 300;
+}

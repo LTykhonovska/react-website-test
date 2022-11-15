@@ -1,0 +1,154 @@
+.tabsSection {
+    padding: 100px 0 20px;
+    display: flex;
+}
+
+.tabsImg {
+    display: block;
+    width: 560px;
+    margin-right: 80px;
+    object-fit: cover;
+}
+
+.tabs {
+    padding-top: 30px;
+}
+
+.tabsWrapper {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tabBtnGroup {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 20px;
+}
+
+/* custom react tabs styles */
+
+.tabsWrapper :global(.react-tabs__tab-list) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: none;
+    position: relative;
+}
+
+.tabsWrapper :global(.react-tabs__tab-list::before) {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-text);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.tabsWrapper :global(.react-tabs__tab) {
+    width: 100%;
+    padding: 10px 5px 10px 15px;
+    text-transform: uppercase;
+    color: var(--white-text);
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+    border: none;
+    position: relative;
+    transition: all .5s ease;
+}
+
+.tabsWrapper :global(.react-tabs__tab::before) {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--accent);
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    transition: all .5s ease;
+}
+
+.tabsWrapper :global(.react-tabs__tab--selected::before) {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    transition: all .5s ease;
+}
+
+.tabsWrapper :global(.react-tabs__tab--selected::after) {
+    display: none;
+}
+
+.tabsWrapper :global(.react-tabs__tab:hover) {
+    color: var(--accent);
+}
+
+.tabsWrapper :global(.react-tabs__tab-panel) {
+    margin-top: 30px;
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+    .tabsSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tabsImg {
+        margin-right: 0;
+    }
+
+    .tabsWrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .tabsWrapper :global(.react-tabs__tab-list) {
+        flex-direction: column;
+        width: 80%;
+        margin: 30px auto 0;
+    }
+
+    .tabsWrapper :global(.react-tabs__tab-list::before) {
+        display: none;
+    }
+
+    .tabsWrapper :global(.react-tabs__tab-panel) {
+        width: 80%;
+        margin: 30px auto 0;
+    }
+
+    .tabsWrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tabsImg {
+        width: 90%;
+    }
+
+    .tabBtnGroup {
+        flex-direction: column;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .readMore,
+    .getInTouch {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

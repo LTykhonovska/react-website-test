@@ -1,0 +1,49 @@
+.linearProgressBarsWrapper {
+    margin-top: 30px;
+}
+
+.linearProgressBar {
+    margin-bottom: 30px;
+}
+
+.linearProgressBar h6 {
+    margin-bottom: 10px;
+    color: var(--dark-grey-text);
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+
+.linearProgressBarBackground {
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    background-color: var(--white-bg);
+}
+
+.linearProgressBarPath {
+    height: 8px;
+    width: 0;
+    transition: all 1s ease;
+    border-radius: 20px;
+    position: relative;
+}
+
+.linearProgressBarValue {
+    font-size: 14px;
+    position: absolute;
+    top: -32px;
+    right: -6px;
+    color: var(--grey-border);
+}
+
+.linearProgressBarMarker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 8px solid var(--white);
+    box-shadow: 0 0 2px 2px rgb(0 0 0 / 10%);
+    position: absolute;
+    top: -8px;
+    right: -4px;
+}

@@ -1,0 +1,48 @@
+.circularProgressBarsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circularProgressBar {
+    margin: 30px 0;
+    width: 150px;
+    height: 150px;
+}
+
+.circularProgressBar h6 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--grey-bg);
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+    .circularProgressBarsWrapper {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 900px) {
+    .circularProgressBar {
+        margin: 30px 0;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+    .circularProgressBarsWrapper {
+        flex-direction: column;
+    }
+
+    .circularProgressBar {
+        margin: 30px 0;
+        width: 180px;
+        height: 180px;
+    }
+}

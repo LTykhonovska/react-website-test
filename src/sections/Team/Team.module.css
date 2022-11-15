@@ -1,0 +1,104 @@
+.team {
+    padding: 60px 0;
+}
+
+.teamWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.teamMember {
+    width: 280px;
+    text-align: center;
+}
+
+.teamMemberPhoto {
+    position: relative;
+}
+
+.teamMemberPhoto::before {
+    content: '';
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--white);
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teamMemberPhoto > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    transform: translateY(0);
+    transition: all ease .7s;
+}
+
+.teamMember:hover .teamMemberPhoto > img {
+    transform: translateY(-7px);
+    border-color: var(--accent);
+}
+
+.teamMemberInfo {
+    background-color: var(--white-bg);
+    padding: 70px 10px 40px;
+    margin-top: -35px;
+}
+
+.teamMemberName {
+    margin-bottom: 10px;
+}
+
+.teamMemberPosition {
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.teamMemberPhone {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.teamMemberPhone:hover {
+    color: inherit;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+    .teamWrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .teamMember {
+        width: 45%;
+        margin-top: 50px ;
+    }
+}
+
+@media (max-width: 760px) {
+    .teamWrapper {
+        flex-direction: column;
+    }
+
+    .teamMember {
+        width: 80%;
+        margin: 50px auto 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .teamMember {
+        width: 90%;
+        margin: 30px auto 0;
+    }
+}

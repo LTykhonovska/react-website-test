@@ -1,0 +1,116 @@
+.feedbacks {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.feedbacks h2 {
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.feedbacksWrapper {
+
+}
+
+.feedback {
+    min-height: max-content;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    box-shadow: 2px 2px 20px 3px rgba(0,0,0,0.20);
+    position: relative;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.feedback::before {
+    content: '';
+    width: 94%;
+    height: 20px;
+    background-color: #E8E8E8;
+    position: absolute;
+    top: -20px;
+    left: 3%;
+}
+
+.feedback::after {
+    content: '';
+    width: 98%;
+    height: 12px;
+    background-color: #F4F4F4;
+    position: absolute;
+    z-index: 2;
+    top: -12px;
+    left: 1%;
+}
+
+.feedbackImg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feedbackName {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--grey-border);
+}
+
+.feedbackRole {
+    color: var(--accent);
+    font-weight: 300;
+}
+
+.feedbackText {
+    max-width: 700px;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+}
+
+.feedbackText svg:first-child {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.feedbackText svg:last-child {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.feedbacksWrapper :global(.swiper) {
+    height: 460px;
+}
+
+.feedbacksWrapper :global(.swiper-slide) {
+    padding: 20px;
+}
+
+.feedbacksWrapper :global(.swiper-pagination) {
+    bottom: 0;
+}
